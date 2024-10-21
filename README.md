@@ -1,7 +1,7 @@
 # Hubert Documentation
 
 ## Timeline
-October 25th: Digital Prototypes Due
+October 25th: Digital Prototypes Due <br / > 
 November 8th: Sprint 1
 November 22nd: Sprint 2
 December 16th: Sprint 3/ Final Presentation
