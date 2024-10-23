@@ -12,5 +12,9 @@ Our goal is to have a digital prototype with a playable character, collision-bas
 - [X] Make Hubert Playable (~~Lora~~ Preston)
 - [ ] Make Enemy Behavior (Casey)
 - [X] Make Maze Prototype (Preston)
-- [ ] Make Collectable Ice Creams(~~Preston~~ Lora)
+- [ ] Make Collectable Ice Creams (~~Preston~~ Lora)
 
+## Sprint 1 Goals
+TBD
+## Sprint 1 Tasks
+- [ ] Make Collectable Powerups, at the suggestion of Dr. Horn (TBD)
