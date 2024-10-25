@@ -27,4 +27,11 @@ public class HubertBehavior : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         rb.rotation = 0f;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Powerup")) {
+            Destroy(other.gameObject);
+        }
+    }
 }
