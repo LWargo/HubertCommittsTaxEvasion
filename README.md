@@ -17,4 +17,7 @@ Our goal is to have a digital prototype with a playable character, collision-bas
 ## Sprint 1 Goals
 TBD
 ## Sprint 1 Tasks
-- [ ] Make Collectable Powerups, at the suggestion of Dr. Horn (TBD)
+- [ ] Make Collectable Powerups, at the suggestion of Dr. Horn (Casey)
+- [ ] Make More Mazes (Preston)
+- [ ] Start Scripting Out the Romance Storyline (Lora)
+- [ ] Main Menu (Casey)
