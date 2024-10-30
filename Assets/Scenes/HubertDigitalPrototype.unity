@@ -833,7 +833,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 9.450224
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -858,11 +858,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.892, y: 0.425, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 661812651}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588364924
 GameObject:
@@ -1338,8 +1338,7 @@ Transform:
   m_LocalPosition: {x: 14.98, y: 6.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 519420032}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &661812652
@@ -1427,10 +1426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  enemyPatrol: {fileID: 1963058329}
   startpos: {x: 0, y: 0, z: 0}
   icc_txt: {fileID: 739869291}
-  iceCream: {fileID: 1064074356}
 --- !u!1 &664421718
 GameObject:
   m_ObjectHideFlags: 0
@@ -5244,3 +5241,4 @@ SceneRoots:
   - {fileID: 1560966226}
   - {fileID: 1806811229}
   - {fileID: 1192402939}
+  - {fileID: 519420032}

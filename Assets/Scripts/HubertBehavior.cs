@@ -11,18 +11,16 @@ public class HubertBehavior : MonoBehaviour
     public float moveSpeed = 5f;  // Adjust this for your desired speed
     private Rigidbody2D rb;
     private Vector2 movement;
-    public EnemyPatrol enemyPatrol;
     public Vector3 startpos;
     public TMP_Text icc_txt;
     int icc = 0;
-    public GameObject iceCream;
 
     void Start()
     {
       //  icc_txt = GetComponent<TMP_Text>();
         rb = GetComponent<Rigidbody2D>();
-        startpos = this.transform.position;
-        icc_txt.SetText( "Ice Cream Count: " + icc);
+        startpos = transform.position;
+        icc_txt.SetText("Ice Cream Count: " + icc);
     }
     
 
@@ -47,9 +45,9 @@ public class HubertBehavior : MonoBehaviour
             Destroy(other.gameObject);
         }
         if(other.gameObject.CompareTag("Enemy")){
-            this.transform.position = startpos; //move player back to start
+            transform.position = startpos; //move player back to start
             icc = 0;
-            icc_txt.text="Ice Cream Count:" + icc;
+            icc_txt.text = "Ice Cream Count: " + icc;
         }
         if(other.gameObject.CompareTag("Powerup")){
             icc++;
