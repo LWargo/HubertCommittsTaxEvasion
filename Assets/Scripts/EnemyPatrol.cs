@@ -27,7 +27,7 @@ public class EnemyPatrol : MonoBehaviour
 
     void IncreaseTargetInt() {
         targetPoint++;
-        transform.Rotate(0, 0, -90);
+        // transform.Rotate(0, 0, -90);
         // if the enemy has reached all patrol points, loop through all patrol points again
         if(targetPoint >= patrolPoints.Length) {
             targetPoint = 0;
