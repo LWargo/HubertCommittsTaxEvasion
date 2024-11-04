@@ -21,8 +21,8 @@ public class HubertBehavior : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        startpos = this.transform.position;
-        icc_txt.SetText( "Ice Creams: " + icc);
+        startpos = transform.position;
+        icc_txt.SetText("Ice Creams: " + icc);
     }
     
 
@@ -44,9 +44,9 @@ public class HubertBehavior : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.CompareTag("Enemy")){
-            this.transform.position = startpos; //move player back to start
+            transform.position = startpos; //move player back to start
             icc = 0;
-            icc_txt.text="Ice Creams: " + icc;
+            icc_txt.text = "Ice Creams: " + icc;
         }
 
         if(other.gameObject.CompareTag("IceCream")){
