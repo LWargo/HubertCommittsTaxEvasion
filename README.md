@@ -18,11 +18,11 @@ Our goal is to have a more fleshed out digital prototype, such that the players 
 ## Sprint 1 Tasks
 - [X] Prototype Collectable Ice Creams (~~Preston~~ Lora)
 - [X] Add Ice Cream Counter (Lora)
-- [X] Prototype Collectable Powerups, at the suggestion of Dr. Horn (Casey)
+- [X] Prototype Sprinting Powerup, at the suggestion of Dr. Horn (Casey)
 - [X] Make Second Maze (Preston)
 - [X] Prototype Main Menu (~~Casey~~ Lora)
 - [ ] Prototype Platforming Bossfight (Casey)
-- [ ] Make Powerups Consumable (Preston)
+- [X] Make Powerups Consumable (Preston)
 - [ ] Flesh Out IRS Form (Lora)
 
 ## Sprint 2 Goals
@@ -30,3 +30,4 @@ TBD
 ## Sprint 2 Tasks
 - [ ] Script Out the Romance Storyline (Lora)
 - [ ] Make Third Maze (Preston)
+- [ ] Prototype Invisibility Powerup (TBD)
