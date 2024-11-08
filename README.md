@@ -4,7 +4,7 @@
 October 25th: Digital Prototypes <br>
 November 8th: Sprint 1 <br>
 November 22nd: Sprint 2 <br>
-December 16th: Sprint 3/Final Presentation <br>
+December 16th, 12pm: Sprint 3/Final Presentation <br>
 
 ## Sprint 0 Goals
 Our goal is to have a digital prototype with a playable character, collision-based enemy interactions, collectable ice creams, and a maze.
@@ -14,19 +14,31 @@ Our goal is to have a digital prototype with a playable character, collision-bas
 - [X] Make Maze Prototype (Preston)
 
 ## Sprint 1 Goals
-Our goal is to have a more fleshed out digital prototype, such that the players have more agency (ex. collecting ice creams, skillfully using powerups, etc.)
+Our goal is to have a more fleshed-out digital prototype, such that the players have more agency (ex. collecting ice creams, skillfully using powerups, etc.)
 ## Sprint 1 Tasks
 - [X] Prototype Collectable Ice Creams (~~Preston~~ Lora)
 - [X] Add Ice Cream Counter (Lora)
-- [X] Prototype Collectable Powerups, at the suggestion of Dr. Horn (Casey)
+- [X] Prototype Sprinting Powerup, at the suggestion of Dr. Horn (Casey)
 - [X] Make Second Maze (Preston)
 - [X] Prototype Main Menu (~~Casey~~ Lora)
-- [ ] Prototype Platforming Bossfight (Casey)
-- [ ] Make Powerups Consumable (Preston)
-- [ ] Flesh Out IRS Form (Lora)
+- [X] Make Powerups Stashable (Preston)
 
 ## Sprint 2 Goals
-TBD
+Our goal is to expand upon our more fleshed-out prototype and add more functionality to other phases of the game.
 ## Sprint 2 Tasks
-- [ ] Script Out the Romance Storyline (Lora)
+- [ ] Design Art (Casey)
+- [ ] Rewiew Bugs Discovered in Playtesting (Preston)
+- [ ] Create an Intro Scene (Lora)
+- [ ] Create a Tutorial Scene (Lora)
+- [ ] Create Transition between Levels (Lora)
+- [ ] Prototype Platforming Bossfight (Casey)
 - [ ] Make Third Maze (Preston)
+- [ ] Flesh Out IRS Form (Lora)
+- [ ] Script Out the Romance Storyline (Lora)
+- [ ] Prototype Invisibility Powerup (TBD)
+- [ ] Make Game Over Screens (TBD)
+
+## Sprint 3 Goals
+Our goal is to finalize production of our game for release.
+## Sprint 3 Tasks
+TBD; assumedly will include whatever is incomplete from Sprint 2.
