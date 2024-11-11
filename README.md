@@ -27,7 +27,7 @@ Our goal is to have a more fleshed-out digital prototype, such that the players 
 Our goal is to expand upon our more fleshed-out prototype and add more functionality to other phases of the game.
 ## Sprint 2 Tasks
 - [ ] Design Art (Casey)
-- [X] Rewiew Bugs Discovered in Playtesting (Preston)
+- [X] Review Bugs Discovered in Playtesting (Preston)
 - [ ] Create an Intro Scene (Lora)
 - [X] Create a Tutorial Scene (Lora)
 - [ ] Create Transition between Levels (Lora)
@@ -36,7 +36,8 @@ Our goal is to expand upon our more fleshed-out prototype and add more functiona
 - [ ] Flesh Out IRS Form (Lora)
 - [ ] Script Out the Romance Storyline (Lora)
 - [ ] Prototype Invisibility Powerup (TBD)
-- [ ] Make Game Over Screens (TBD)
+- [ ] Make Game Over Screens/Panels (Lora)
+- [ ] Final Maze 1 Design (Lora)
 
 ## Sprint 3 Goals
 Our goal is to finalize production of our game for release.
