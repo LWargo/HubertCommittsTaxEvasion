@@ -33,7 +33,7 @@ public class HubertBehavior : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal"); // Left and Right keys (or A/D keys)
         movement.y = Input.GetAxisRaw("Vertical");   // Up and Down keys (or W/S keys)
 
-        if (pwp_txt.text == "Press E = Sprint" && Input.GetKey(KeyCode.E))
+        if (pwp_txt.text == "Press E to Sprint" && Input.GetKey(KeyCode.E))
         {
             pwp_txt.text = "";
             moveSpeedHolder = moveSpeed;
@@ -65,7 +65,7 @@ public class HubertBehavior : MonoBehaviour
 
         if (other.gameObject.CompareTag("Powerup")) {
             Destroy(other.gameObject);
-            pwp_txt.text = "Press E = Sprint";
+            pwp_txt.text = "Press E to Sprint";
         }
     }
 
