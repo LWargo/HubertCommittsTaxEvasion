@@ -29,7 +29,7 @@ Our goal is to expand upon our more fleshed-out prototype and add more functiona
 - [ ] Design Art (Casey)
 - [ ] Rewiew Bugs Discovered in Playtesting (Preston)
 - [ ] Create an Intro Scene (Lora)
-- [ ] Create a Tutorial Scene (Lora)
+- [X] Create a Tutorial Scene (Lora)
 - [ ] Create Transition between Levels (Lora)
 - [ ] Prototype Platforming Bossfight (Casey)
 - [ ] Make Third Maze (Preston)
