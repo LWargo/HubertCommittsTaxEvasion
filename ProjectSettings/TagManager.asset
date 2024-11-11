@@ -7,11 +7,12 @@ TagManager:
   - Enemy
   - Powerup
   - IceCream
+  - Boss
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 

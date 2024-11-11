@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Threading;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 // chatgpt influenced
 public class HubertBehavior : MonoBehaviour
@@ -44,9 +45,10 @@ public class HubertBehavior : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.CompareTag("Enemy")){
-            this.transform.position = startpos; //move player back to start
-            icc = 0;
-            icc_txt.text="Ice Creams: " + icc;
+            // this.transform.position = startpos; //move player back to start
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // icc = 0;
+            // icc_txt.text="Ice Creams: " + icc;
         }
 
         if(other.gameObject.CompareTag("IceCream")){
