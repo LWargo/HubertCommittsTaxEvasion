@@ -1800,6 +1800,7 @@ MonoBehaviour:
   moveSpeedHolder: 0
   startpos: {x: 0, y: 0, z: 0}
   icc_txt: {fileID: 29368486}
+  pwp_txt: {fileID: 0}
 --- !u!1 &664421718
 GameObject:
   m_ObjectHideFlags: 0
