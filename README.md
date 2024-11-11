@@ -27,7 +27,7 @@ Our goal is to have a more fleshed-out digital prototype, such that the players 
 Our goal is to expand upon our more fleshed-out prototype and add more functionality to other phases of the game.
 ## Sprint 2 Tasks
 - [ ] Design Art (Casey)
-- [ ] Rewiew Bugs Discovered in Playtesting (Preston)
+- [X] Rewiew Bugs Discovered in Playtesting (Preston)
 - [ ] Create an Intro Scene (Lora)
 - [X] Create a Tutorial Scene (Lora)
 - [ ] Create Transition between Levels (Lora)
