@@ -61,5 +61,10 @@ public class Tutorial_script : MonoBehaviour
             enemy.SetActive(true);
             return;
         }
+        if(step_count == 4){
+            tutorial.text = "Sometimes, there will be powerups laying around to collect...";
+            step_count++;
+            return;
+        }
     }
 }
