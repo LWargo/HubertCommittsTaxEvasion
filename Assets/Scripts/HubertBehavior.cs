@@ -18,21 +18,29 @@ public class HubertBehavior : MonoBehaviour
     public TMP_Text icc_txt;
     int icc = 0;
     // public GameObject iceCream;
+    public TMP_Text pwp_txt;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        startpos = this.transform.position;
-        icc_txt.SetText( "Ice Creams: " + icc);
+        startpos = transform.position;
+        icc_txt.SetText("Ice Creams: " + icc);
+        pwp_txt.SetText("");
     }
     
-
     void Update()
     {
         // Get input from the player
         movement.x = Input.GetAxisRaw("Horizontal"); // Left and Right keys (or A/D keys)
         movement.y = Input.GetAxisRaw("Vertical");   // Up and Down keys (or W/S keys)
-        
+
+        if (pwp_txt.text == "Press E = Sprint" && Input.GetKey(KeyCode.E))
+        {
+            pwp_txt.text = "";
+            moveSpeedHolder = moveSpeed;
+            moveSpeed = 10f;
+            StartCoroutine(DisablePowerup());
+        }
     }
 
     void FixedUpdate()
@@ -59,14 +67,12 @@ public class HubertBehavior : MonoBehaviour
 
         if (other.gameObject.CompareTag("Powerup")) {
             Destroy(other.gameObject);
-            moveSpeedHolder = moveSpeed;
-            moveSpeed = 10f;
-            StartCoroutine(DisablePowerup());
+            pwp_txt.text = "Press E = Sprint";
         }
     }
 
     IEnumerator DisablePowerup() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         moveSpeed = moveSpeedHolder;
     }
 }
