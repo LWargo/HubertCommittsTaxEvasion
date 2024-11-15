@@ -42,7 +42,7 @@ public class PlatformHubertBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Boss")){
+        if(other.gameObject.CompareTag("Boss") && other.collider.bounciness < 1){
             if(!isKnockingBack) {
                 health--;
                 healthCounter.text = "Health: " + health;
