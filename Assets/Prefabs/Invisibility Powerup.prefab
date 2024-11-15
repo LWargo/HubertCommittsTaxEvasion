@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8705586379705465741}
   m_Layer: 0
   m_Name: Invisibility Powerup
-  m_TagString: SpeedPWP
+  m_TagString: InvisPWP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -9,6 +9,7 @@ TagManager:
   - IceCream
   - Boss
   - SpeedPWP
+  - InvisPWP
   layers:
   - Default
   - TransparentFX
