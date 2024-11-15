@@ -34,7 +34,6 @@ public class PlatformHubertBehavior : MonoBehaviour
     }
 
     void FixedUpdate() {
-        //CURRENTLY OVERWRITING KNOCKBACK FORCE
         if(!isKnockingBack) {
             rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
         }
@@ -42,7 +41,7 @@ public class PlatformHubertBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Boss")){
+        if(other.gameObject.CompareTag("Boss") && other.collider.bounciness < 1){
             if(!isKnockingBack) {
                 health--;
                 healthCounter.text = "Health: " + health;
