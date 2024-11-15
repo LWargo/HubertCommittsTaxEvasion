@@ -34,7 +34,6 @@ public class PlatformHubertBehavior : MonoBehaviour
     }
 
     void FixedUpdate() {
-        //CURRENTLY OVERWRITING KNOCKBACK FORCE
         if(!isKnockingBack) {
             rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
         }
