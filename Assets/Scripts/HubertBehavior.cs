@@ -41,6 +41,11 @@ public class HubertBehavior : MonoBehaviour
             moveSpeed = 10f;
             StartCoroutine(DisablePowerup());
         }
+        if (pwp_txt.text == "Press R = Invisible" && Input.GetKey(KeyCode.R))
+        {
+            pwp_txt.text = "";
+            StartCoroutine(DisablePowerup());
+        }
     }
 
     void FixedUpdate()
@@ -65,9 +70,14 @@ public class HubertBehavior : MonoBehaviour
             icc_txt.text = "Ice Creams: " + icc;
         }
 
-        if (other.gameObject.CompareTag("Powerup")) {
+        if (other.gameObject.CompareTag("SpeedPWP")) {
             Destroy(other.gameObject);
             pwp_txt.text = "Press E = Sprint";
+        }
+
+        if (other.gameObject.CompareTag("InvisPWP")) {
+            Destroy(other.gameObject);
+            pwp_txt.text = "Press R = Invisible";
         }
     }
 
