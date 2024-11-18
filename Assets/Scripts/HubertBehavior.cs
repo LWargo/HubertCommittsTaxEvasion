@@ -75,4 +75,5 @@ public class HubertBehavior : MonoBehaviour
         yield return new WaitForSeconds(3);
         moveSpeed = moveSpeedHolder;
     }
+    
 }
