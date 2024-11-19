@@ -36,7 +36,7 @@ Our goal is to expand upon our more fleshed-out prototype and add more functiona
 - [X] Boss Fight Hubert Take Damage (Casey)
 - [ ] Boss Fight Boss Take Damage
 - [X] Boss Fight Hubert Attack (Casey)
-- [ ] Prototype Invisibility Powerup (Preston)
+- [X] Prototype Invisibility Powerup (Preston)
 - [ ] Make Game Over Screens/Panels (Lora)
 - [X] Final Maze 1 Design (Lora)
 - [ ] Final Maze 2 Design (Lora)
