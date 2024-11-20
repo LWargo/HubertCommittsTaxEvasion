@@ -19,9 +19,13 @@ public class HubertBehavior : MonoBehaviour
     int icc = 0;
     // public GameObject iceCream;
     public TMP_Text pwp_txt;
+    private SpriteRenderer spriteRenderer;
+    public string hubertColor = "#98D2F5";
+    public string invisColor = "#848484";
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         startpos = transform.position;
         icc_txt.SetText("Ice Creams: " + icc);
@@ -39,7 +43,14 @@ public class HubertBehavior : MonoBehaviour
             pwp_txt.text = "";
             moveSpeedHolder = moveSpeed;
             moveSpeed = 10f;
-            StartCoroutine(DisablePowerup());
+            StartCoroutine(DisableSprintPowerup());
+        }
+        if (pwp_txt.text == "Press R = Invisible" && Input.GetKey(KeyCode.R))
+        {
+            pwp_txt.text = "";
+            ColorUtility.TryParseHtmlString(invisColor, out Color invisColorHex);
+            spriteRenderer.color = invisColorHex;
+            StartCoroutine(DisableInvisPowerup());
         }
     }
 
@@ -52,7 +63,8 @@ public class HubertBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Enemy")){
+        ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
+        if(other.gameObject.CompareTag("Enemy") && spriteRenderer.color == hubertColorHex){
             // this.transform.position = startpos; //move player back to start
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             // icc = 0;
@@ -65,15 +77,25 @@ public class HubertBehavior : MonoBehaviour
             icc_txt.text = "Ice Creams: " + icc;
         }
 
-        if (other.gameObject.CompareTag("Powerup")) {
+        if (other.gameObject.CompareTag("SpeedPWP")) {
             Destroy(other.gameObject);
             pwp_txt.text = "Press E = Sprint";
         }
+
+        if (other.gameObject.CompareTag("InvisPWP")) {
+            Destroy(other.gameObject);
+            pwp_txt.text = "Press R = Invisible";
+        }
     }
 
-    IEnumerator DisablePowerup() {
+    IEnumerator DisableSprintPowerup() {
         yield return new WaitForSeconds(3);
         moveSpeed = moveSpeedHolder;
     }
     
+    IEnumerator DisableInvisPowerup() {
+        yield return new WaitForSeconds(3);
+        ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
+        spriteRenderer.color = hubertColorHex;
+    }
 }
