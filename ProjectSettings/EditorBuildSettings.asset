@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 57a79be6f57b94baba8e17667f6a909c
   - enabled: 1
-    path: Assets/Scenes/Maze 2.unity
+    path: Assets/Scenes/Prototype Scenes/Maze 2.unity
     guid: 6c49bb280a6bc4177895461c41730300
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
