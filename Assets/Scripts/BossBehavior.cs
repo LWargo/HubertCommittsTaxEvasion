@@ -77,8 +77,15 @@ public class BossBehavior : MonoBehaviour
 
             playerPos = player.transform.position;
 
+            while(transform.position.x!=playerPos.x) {
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y),speed);
+
+                yield return null;
+            }
+
             yield return new WaitForSeconds(1f);
             rb.isKinematic = false;
+            yield return new WaitForSeconds(1f);
 
             while(transform.position.x!=playerPos.x) {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y),speed);

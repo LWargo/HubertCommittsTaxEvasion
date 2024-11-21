@@ -277,7 +277,7 @@ Transform:
   m_GameObject: {fileID: 311417991}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: -1.5, z: 0}
+  m_LocalPosition: {x: -6, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -294,9 +294,9 @@ GameObject:
   - component: {fileID: 637473505}
   - component: {fileID: 637473504}
   - component: {fileID: 637473509}
+  - component: {fileID: 637473510}
   - component: {fileID: 637473506}
   - component: {fileID: 637473508}
-  - component: {fileID: 637473510}
   m_Layer: 3
   m_Name: PlatformBoss
   m_TagString: Boss
@@ -365,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 637473503}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 2, y: -3.0500002, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 2
   health: 10
-  speed: 0.03
+  speed: 0.05
   spots:
   - {fileID: 311417992}
   - {fileID: 1248608861}
@@ -495,7 +495,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -532,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 848024609}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -574,7 +574,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5973442, g: 0.75099754, b: 0.9924528, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -757,7 +757,7 @@ Transform:
   m_GameObject: {fileID: 1248608860}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: -1.5, z: 0}
+  m_LocalPosition: {x: 6, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,15 +822,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Health: 10'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 285a3624a63300942b985ac9782d3b80, type: 2}
+  m_sharedMaterial: {fileID: 24876286592246177, guid: 285a3624a63300942b985ac9782d3b80, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279045510
+  m_fontColor: {r: 0.5245282, g: 0.05047346, b: 0.05047346, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -847,8 +847,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 75
-  m_fontSizeBase: 75
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1154,7 +1154,7 @@ Transform:
   m_GameObject: {fileID: 1698891246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.25, z: 0}
+  m_LocalPosition: {x: 0, y: -5.8, z: 0}
   m_LocalScale: {x: 20.0004, y: 3.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1336,7 +1336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397950258197349297, guid: 2a8740d03bd6e1f4181171a6b4b9330b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.5500002
       objectReference: {fileID: 0}
     - target: {fileID: 8397950258197349297, guid: 2a8740d03bd6e1f4181171a6b4b9330b, type: 3}
       propertyPath: m_LocalPosition.z
