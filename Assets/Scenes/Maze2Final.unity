@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6410319792288543272, guid: ff885dd9a6d494d38b5c3dc726059ab2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6861719892267194130, guid: ff885dd9a6d494d38b5c3dc726059ab2, type: 3}
       propertyPath: m_Name
       value: Smaller Ice Cream (1)
@@ -1140,6 +1144,10 @@ PrefabInstance:
     - target: {fileID: 6794654876038274981, guid: 1c64255f6c6284442b8f0a9f99b85bc5, type: 3}
       propertyPath: m_Name
       value: Speed Powerup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408162869561572499, guid: 1c64255f6c6284442b8f0a9f99b85bc5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10907,6 +10915,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6410319792288543272, guid: ff885dd9a6d494d38b5c3dc726059ab2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6861719892267194130, guid: ff885dd9a6d494d38b5c3dc726059ab2, type: 3}
       propertyPath: m_Name
       value: Smaller Ice Cream (2)
@@ -13370,7 +13382,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1577275829, guid: 6da315504223e4e67a676bc931347d8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15948,6 +15960,10 @@ PrefabInstance:
     - target: {fileID: 2958736079488960995, guid: ff885dd9a6d494d38b5c3dc726059ab2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410319792288543272, guid: ff885dd9a6d494d38b5c3dc726059ab2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6861719892267194130, guid: ff885dd9a6d494d38b5c3dc726059ab2, type: 3}
       propertyPath: m_Name
