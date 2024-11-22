@@ -30,6 +30,8 @@ public class HubertBehavior : MonoBehaviour
         startpos = transform.position;
         icc_txt.SetText("Ice Creams: " + icc);
         pwp_txt.SetText("");
+        ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
+        spriteRenderer.color = hubertColorHex;
     }
     
     void Update()
@@ -89,7 +91,7 @@ public class HubertBehavior : MonoBehaviour
     }
 
     IEnumerator DisableSprintPowerup() {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         moveSpeed = moveSpeedHolder;
     }
     
