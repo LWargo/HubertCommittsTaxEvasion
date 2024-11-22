@@ -18,21 +18,42 @@ public class HubertBehavior : MonoBehaviour
     public TMP_Text icc_txt;
     int icc = 0;
     // public GameObject iceCream;
+    public TMP_Text pwp_txt;
+    private SpriteRenderer spriteRenderer;
+    public string hubertColor = "#98D2F5";
+    public string invisColor = "#848484";
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        startpos = this.transform.position;
-        icc_txt.SetText( "Ice Creams: " + icc);
+        startpos = transform.position;
+        icc_txt.SetText("Ice Creams: " + icc);
+        pwp_txt.SetText("");
+        ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
+        spriteRenderer.color = hubertColorHex;
     }
     
-
     void Update()
     {
         // Get input from the player
         movement.x = Input.GetAxisRaw("Horizontal"); // Left and Right keys (or A/D keys)
         movement.y = Input.GetAxisRaw("Vertical");   // Up and Down keys (or W/S keys)
-        
+
+        if (pwp_txt.text == "Press E = Sprint" && Input.GetKey(KeyCode.E))
+        {
+            pwp_txt.text = "";
+            moveSpeedHolder = moveSpeed;
+            moveSpeed = 10f;
+            StartCoroutine(DisableSprintPowerup());
+        }
+        if (pwp_txt.text == "Press R = Invisible" && Input.GetKey(KeyCode.R))
+        {
+            pwp_txt.text = "";
+            ColorUtility.TryParseHtmlString(invisColor, out Color invisColorHex);
+            spriteRenderer.color = invisColorHex;
+            StartCoroutine(DisableInvisPowerup());
+        }
     }
 
     void FixedUpdate()
@@ -44,7 +65,8 @@ public class HubertBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Enemy")){
+        ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
+        if(other.gameObject.CompareTag("Enemy") && spriteRenderer.color == hubertColorHex){
             // this.transform.position = startpos; //move player back to start
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             // icc = 0;
@@ -57,16 +79,25 @@ public class HubertBehavior : MonoBehaviour
             icc_txt.text = "Ice Creams: " + icc;
         }
 
-        if (other.gameObject.CompareTag("Powerup")) {
+        if (other.gameObject.CompareTag("SpeedPWP")) {
             Destroy(other.gameObject);
-            moveSpeedHolder = moveSpeed;
-            moveSpeed = 10f;
-            StartCoroutine(DisablePowerup());
+            pwp_txt.text = "Press E = Sprint";
+        }
+
+        if (other.gameObject.CompareTag("InvisPWP")) {
+            Destroy(other.gameObject);
+            pwp_txt.text = "Press R = Invisible";
         }
     }
 
-    IEnumerator DisablePowerup() {
-        yield return new WaitForSeconds(5);
+    IEnumerator DisableSprintPowerup() {
+        yield return new WaitForSeconds(1);
         moveSpeed = moveSpeedHolder;
+    }
+    
+    IEnumerator DisableInvisPowerup() {
+        yield return new WaitForSeconds(3);
+        ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
+        spriteRenderer.color = hubertColorHex;
     }
 }

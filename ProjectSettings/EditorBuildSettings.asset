@@ -5,7 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/HubertDigitalPrototype.unity
+    guid: c4a922ce037c84cb78d5933563aef0df
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 57a79be6f57b94baba8e17667f6a909c
+  - enabled: 0
+    path: Assets/Scenes/Prototype Scenes/Maze 2.unity
+    guid: 6c49bb280a6bc4177895461c41730300
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 7ca113974115449009d500504a87119c
+  - enabled: 1
+    path: Assets/Scenes/Maze1Final.unity
+    guid: 4554837ec534a4d8a80e5aebd1440ed7
+  - enabled: 1
+    path: Assets/Scenes/Maze3Final.unity
+    guid: 03ecad157af64476896cfc2f5a06ea04
+  - enabled: 1
+    path: Assets/Scenes/Maze2Final.unity
+    guid: e4b189e570c1b43f7b30c8da74bce296
   m_configObjects: {}
