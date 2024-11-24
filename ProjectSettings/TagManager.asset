@@ -8,8 +8,8 @@ TagManager:
   - Powerup
   - IceCream
   - Boss
-  - SpeedPWP
-  - InvisPWP
+  - Wall
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -17,7 +17,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Walls
+  - 
   - 
   - 
   - 

@@ -19,11 +19,15 @@ public class PlatformHubertBehavior : MonoBehaviour
     public float knockbackForce;
     private bool isKnockingBack;
 
+    public BossBehavior boss;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         healthCounter.SetText( "Health: " + health);
+
+        boss = GameObject.Find("PlatformBoss").GetComponent<BossBehavior>();
     }
 
     // Update is called once per frame
@@ -42,6 +46,18 @@ public class PlatformHubertBehavior : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.CompareTag("Boss") && other.collider.bounciness < 1){
+            if(!isKnockingBack) {
+                health--;
+                healthCounter.text = "Health: " + health;
+            }
+            StartCoroutine(Knockback(knockbackForce));
+        } else if(other.gameObject.CompareTag("Boss")) {
+            boss.TakeDamage();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Projectile")) {
             if(!isKnockingBack) {
                 health--;
                 healthCounter.text = "Health: " + health;
