@@ -20,7 +20,7 @@ public class HubertBehavior : MonoBehaviour
     // public GameObject iceCream;
     public TMP_Text pwp_txt;
     private SpriteRenderer spriteRenderer;
-    public string hubertColor = "#98D2F5";
+    public string hubertColor = "#FFFFFF";
     public string invisColor = "#848484";
 
     void Start()
@@ -69,8 +69,6 @@ public class HubertBehavior : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy") && spriteRenderer.color == hubertColorHex){
             // this.transform.position = startpos; //move player back to start
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            // icc = 0;
-            // icc_txt.text="Ice Creams: " + icc;
         }
 
         if(other.gameObject.CompareTag("IceCream")){
