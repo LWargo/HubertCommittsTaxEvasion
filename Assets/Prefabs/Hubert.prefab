@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.59460664, g: 0.82291234, b: 0.9622642, a: 1}
+  m_Color: {r: 0.37824848, g: 0.8260173, b: 0.9433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -175,3 +175,6 @@ MonoBehaviour:
   moveSpeedHolder: 0
   startpos: {x: 0, y: 0, z: 0}
   icc_txt: {fileID: 0}
+  pwp_txt: {fileID: 0}
+  hubertColor: '#98D2F5'
+  invisColor: '#848484'
