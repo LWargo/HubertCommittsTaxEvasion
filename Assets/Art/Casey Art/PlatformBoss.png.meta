@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,16 +116,16 @@ TextureImporter:
         x: 0
         y: 0
         width: 32
-        height: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f0bab507a5933c4d90fc4eaa73d11b0
-      internalID: 1750070216
+      spriteID: 656f945ee5759cc4d8e9cd32a66ea403
+      internalID: 164629187
       vertices: []
       indices: 
       edges: []
@@ -137,16 +137,16 @@ TextureImporter:
         x: 32
         y: 0
         width: 32
-        height: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fe6bc32e5ea9db4cb6d057337357a87
-      internalID: 1700433568
+      spriteID: 33cd213d82e0dae44a629bf5d56394f0
+      internalID: 1805758966
       vertices: []
       indices: 
       edges: []
@@ -158,16 +158,16 @@ TextureImporter:
         x: 64
         y: 0
         width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0135c5d27eb852745ac68fa47c92089b
-      internalID: 1223654353
+      spriteID: f59bae49924b2c24f82292edd90aa062
+      internalID: 806290564
       vertices: []
       indices: 
       edges: []
@@ -179,16 +179,16 @@ TextureImporter:
         x: 96
         y: 0
         width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41c34cd73c7650d46b3e08024e850e42
-      internalID: 504906797
+      spriteID: 1610d5e295812794bb3b7abf03da079c
+      internalID: -260320989
       vertices: []
       indices: 
       edges: []
@@ -200,16 +200,37 @@ TextureImporter:
         x: 128
         y: 0
         width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9e286b5e8e015c4a80068b3cb78bcbf
-      internalID: 1563041201
+      spriteID: 98bbd1a3e4624e0489f49b1af3c35c57
+      internalID: 463548676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatformBoss_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.44444445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d691b0df99cb86844a738a72c847e9e6
+      internalID: 266491112
       vertices: []
       indices: 
       edges: []
@@ -225,11 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlatformBoss_0: 1750070216
-      PlatformBoss_1: 1700433568
-      PlatformBoss_2: 1223654353
-      PlatformBoss_3: 504906797
-      PlatformBoss_4: 1563041201
+      PlatformBoss_0: 164629187
+      PlatformBoss_1: 1805758966
+      PlatformBoss_2: 806290564
+      PlatformBoss_3: -260320989
+      PlatformBoss_4: 463548676
+      PlatformBoss_5: 266491112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
