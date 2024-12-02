@@ -9,6 +9,7 @@ public class PlatformHubertBehavior : MonoBehaviour
     public float speed;
     public float jumpPower;
     Rigidbody2D rb;
+    private Animator anim;
     private float horizontal;
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -25,6 +26,7 @@ public class PlatformHubertBehavior : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         healthCounter.SetText( "Health: " + health);
 
         boss = GameObject.Find("PlatformBoss").GetComponent<BossBehavior>();
@@ -35,6 +37,7 @@ public class PlatformHubertBehavior : MonoBehaviour
     {
         if(isFacingRight && horizontal < 0f) Flip();
         if(!isFacingRight && horizontal > 0f) Flip();
+        anim.SetBool("onGround",IsGrounded());
     }
 
     void FixedUpdate() {

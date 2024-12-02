@@ -7,8 +7,8 @@ using UnityEngine;
 public class BossBehavior : MonoBehaviour
 {
     public float timeBetweenAttacks;
-    private bool attacking = false;
     public int health;
+    public int maxHealth;
     public float speed;
     private bool isFacingRight = false;
     public Transform[] spots;
@@ -18,13 +18,21 @@ public class BossBehavior : MonoBehaviour
     private Rigidbody2D rb;
     private GameObject player;
     private Vector3 playerPos;
+    public bool vulnerable;
+
+    private Animator anim;
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine("PhaseOne");
+        vulnerable = false;
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -60,6 +68,9 @@ public class BossBehavior : MonoBehaviour
                 GameObject bullet = Instantiate(projectile,projectileSpawnPoint.position,Quaternion.identity);
                 if(transform.position.x==spots[0].position.x) {
                     bullet.GetComponent<Rigidbody2D>().velocity = Vector2.right*projectileSpeed;
+                    Vector3 localScale = bullet.transform.localScale;
+                    localScale.x *= -1;
+                    bullet.transform.localScale = localScale;
                 } else if(transform.position.x==spots[1].position.x) {
                     bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left*projectileSpeed;
                 }
@@ -85,7 +96,14 @@ public class BossBehavior : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
             rb.isKinematic = false;
-            yield return new WaitForSeconds(1f);
+            // yield return new WaitForSeconds(0.5f);
+            vulnerable = true;
+            anim.SetBool("vulnerable",vulnerable);
+            yield return new WaitForSeconds(2f);
+            if(vulnerable == true) {
+                vulnerable = false;
+                anim.SetBool("vulnerable",vulnerable);
+            }
 
             while(transform.position.x!=playerPos.x) {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y),speed);
@@ -110,9 +128,15 @@ public class BossBehavior : MonoBehaviour
     }
 
     public void TakeDamage() {
-        health--;
-        if(health <= 0) {
-            Destroy(this.gameObject);
+        if(vulnerable) {
+            health--;
+            healthBar.SetHealth(health);
+            if(health <= 0) {
+                Destroy(this.gameObject);
+            }
+            vulnerable = false;
+            anim.SetBool("vulnerable",vulnerable);
+            speed *= 1.25f;
         }
     }
 
