@@ -15,13 +15,17 @@ public class BossBehavior : MonoBehaviour
     public Transform projectileSpawnPoint;
     public GameObject projectile;
     public float projectileSpeed;
+    public int projectileAmount;
+    public float projectileDelay;
     private Rigidbody2D rb;
     private GameObject player;
     private Vector3 playerPos;
     public bool vulnerable;
+    public float vulnerabilityTimer;
 
     private Animator anim;
     public HealthBar healthBar;
+    public float stompDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -53,18 +57,33 @@ public class BossBehavior : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         while(true) {
+
             //FIRST ATTACK
-            int randomSpot = Random.Range(0,2);
-            while(transform.position.x!=spots[randomSpot].position.x) {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(spots[randomSpot].position.x, transform.position.y),speed);
+            Transform temp;
+            if(transform.position.x < player.transform.position.x) {
+                temp = spots[0];
+            } else {
+                temp = spots[1];
+            }
+
+            while(transform.position.x!=temp.position.x) {
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(temp.position.x, transform.position.y),speed);
 
                 yield return null;
             }
 
+            // //FIRST ATTACK
+            // int randomSpot = Random.Range(0,2);
+            // while(transform.position.x!=spots[randomSpot].position.x) {
+            //     transform.position = Vector2.MoveTowards(transform.position, new Vector2(spots[randomSpot].position.x, transform.position.y),speed);
+
+            //     yield return null;
+            // }
+
             yield return new WaitForSeconds(1f);
 
             int i = 0;
-            while(i<3) {
+            while(i<projectileAmount) {
                 GameObject bullet = Instantiate(projectile,projectileSpawnPoint.position,Quaternion.identity);
                 if(transform.position.x==spots[0].position.x) {
                     bullet.GetComponent<Rigidbody2D>().velocity = Vector2.right*projectileSpeed;
@@ -75,7 +94,7 @@ public class BossBehavior : MonoBehaviour
                     bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left*projectileSpeed;
                 }
                 i++;
-                yield return new WaitForSeconds(.8f);
+                yield return new WaitForSeconds(projectileDelay);
             }
 
             //SECOND ATTACK
@@ -94,22 +113,22 @@ public class BossBehavior : MonoBehaviour
                 yield return null;
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(stompDelay);
             rb.isKinematic = false;
             // yield return new WaitForSeconds(0.5f);
             vulnerable = true;
             anim.SetBool("vulnerable",vulnerable);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(vulnerabilityTimer);
             if(vulnerable == true) {
                 vulnerable = false;
                 anim.SetBool("vulnerable",vulnerable);
             }
 
-            while(transform.position.x!=playerPos.x) {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y),speed);
+            // while(transform.position.x!=playerPos.x) {
+            //     transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y),speed);
 
-                yield return null;
-            }
+            //     yield return null;
+            // }
 
             // //THIRD ATTACK
             // Transform temp;
@@ -136,7 +155,12 @@ public class BossBehavior : MonoBehaviour
             }
             vulnerable = false;
             anim.SetBool("vulnerable",vulnerable);
-            speed *= 1.25f;
+            speed *= 1.05f;
+            projectileAmount++;
+            projectileSpeed *= 1.05f;
+            projectileDelay *= 0.9f;
+            vulnerabilityTimer *= 0.9f;
+            stompDelay *= 0.9f;
         }
     }
 
