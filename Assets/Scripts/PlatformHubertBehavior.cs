@@ -16,7 +16,9 @@ public class PlatformHubertBehavior : MonoBehaviour
     private bool isFacingRight = true;
 
     public int health;
-    public TMP_Text healthCounter;
+    public int maxHealth;
+    public HealthBar healthBar;
+    // public TMP_Text healthCounter;
     public float knockbackForce;
     private bool isKnockingBack;
 
@@ -27,7 +29,9 @@ public class PlatformHubertBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        healthCounter.SetText( "Health: " + health);
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        // healthCounter.SetText( "Health: " + health);
 
         boss = GameObject.Find("PlatformBoss").GetComponent<BossBehavior>();
     }
@@ -38,6 +42,11 @@ public class PlatformHubertBehavior : MonoBehaviour
         if(isFacingRight && horizontal < 0f) Flip();
         if(!isFacingRight && horizontal > 0f) Flip();
         anim.SetBool("onGround",IsGrounded());
+        if(horizontal != 0) {
+            anim.SetBool("moving",true);
+        } else {
+            anim.SetBool("moving",false);
+        }
     }
 
     void FixedUpdate() {
@@ -51,7 +60,8 @@ public class PlatformHubertBehavior : MonoBehaviour
         if(other.gameObject.CompareTag("Boss") && other.collider.bounciness < 1){
             if(!isKnockingBack) {
                 health--;
-                healthCounter.text = "Health: " + health;
+                healthBar.SetHealth(health);
+                // healthCounter.text = "Health: " + health;
             }
             StartCoroutine(Knockback(knockbackForce));
         } else if(other.gameObject.CompareTag("Boss")) {
@@ -63,7 +73,8 @@ public class PlatformHubertBehavior : MonoBehaviour
         if(other.gameObject.CompareTag("Projectile")) {
             if(!isKnockingBack) {
                 health--;
-                healthCounter.text = "Health: " + health;
+                healthBar.SetHealth(health);
+                // healthCounter.text = "Health: " + health;
             }
             StartCoroutine(Knockback(knockbackForce));
         }
