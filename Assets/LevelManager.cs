@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     public int index;
+    public GameObject door;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,4 +30,5 @@ public class LevelManager : MonoBehaviour
         }
         
     }
+
 }
