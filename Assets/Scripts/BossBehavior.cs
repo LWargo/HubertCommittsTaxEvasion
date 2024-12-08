@@ -26,6 +26,7 @@ public class BossBehavior : MonoBehaviour
     private Animator anim;
     public HealthBar healthBar;
     public float stompDelay;
+    private bool playerStomped = false;
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +48,9 @@ public class BossBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        // if(other.gameObject.CompareTag("Wall")) {
-        //     Flip();
-        // }
+        if(other.gameObject.CompareTag("Player")) {
+            playerStomped = true;
+        }
     }
 
     IEnumerator PhaseOne() {
@@ -85,12 +86,14 @@ public class BossBehavior : MonoBehaviour
             int i = 0;
             while(i<projectileAmount) {
                 GameObject bullet = Instantiate(projectile,projectileSpawnPoint.position,Quaternion.identity);
-                if(transform.position.x==spots[0].position.x) {
+                if(transform.position.x==spots[0].position.x || temp==spots[0]) {
                     bullet.GetComponent<Rigidbody2D>().velocity = Vector2.right*projectileSpeed;
                     Vector3 localScale = bullet.transform.localScale;
                     localScale.x *= -1;
                     bullet.transform.localScale = localScale;
-                } else if(transform.position.x==spots[1].position.x) {
+                } else if(transform.position.x==spots[1].position.x || temp==spots[1]) {
+                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left*projectileSpeed;
+                } else {
                     bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left*projectileSpeed;
                 }
                 i++;
@@ -98,26 +101,30 @@ public class BossBehavior : MonoBehaviour
             }
 
             //SECOND ATTACK
-            rb.isKinematic = true;
-            while(transform.position.x!=spots[2].position.x) {
-                transform.position = Vector2.MoveTowards(transform.position, spots[2].position,speed);
+            do {
+                playerStomped = false;
+                rb.isKinematic = true;
+                while(transform.position.x!=spots[2].position.x) {
+                    transform.position = Vector2.MoveTowards(transform.position, spots[2].position,speed);
 
-                yield return null;
-            }
+                    yield return null;
+                }
 
-            playerPos = player.transform.position;
+                playerPos = player.transform.position;
 
-            while(transform.position.x!=playerPos.x) {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y),speed);
+                while(transform.position.x!=playerPos.x) {
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y),speed);
 
-                yield return null;
-            }
+                    yield return null;
+                }
 
-            yield return new WaitForSeconds(stompDelay);
-            rb.isKinematic = false;
-            // yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(stompDelay);
+                rb.isKinematic = false;
+                yield return new WaitForSeconds(0.3f);
+            } while(playerStomped);
             vulnerable = true;
             anim.SetBool("vulnerable",vulnerable);
+            // playerStomped = false;
             yield return new WaitForSeconds(vulnerabilityTimer);
             if(vulnerable == true) {
                 vulnerable = false;

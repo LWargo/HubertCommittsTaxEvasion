@@ -9,11 +9,12 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     public int index;
+    public GameObject gameOverPanel;
+    
     // Start is called before the first frame update
     void Start()
     {
         index = SceneManager.GetActiveScene().buildIndex;
-        
     }
 
     // Update is called once per frame
@@ -28,5 +29,17 @@ public class LevelManager : MonoBehaviour
             SceneManager.LoadScene(index);
         }
         
+    }
+
+    public void gameOver() {
+        gameOverPanel.SetActive(true);
+    }
+
+    public void ReloadCurrentScene() {
+        SceneManager.LoadScene(index);
+    }
+
+    public void LoadMainMenu() {
+        SceneManager.LoadScene(6);
     }
 }
