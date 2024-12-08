@@ -1188,6 +1188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerTime: 13
+  index: 0
 --- !u!1 &1434125422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,6 +2372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1773477855}
   - component: {fileID: 1773477854}
+  - component: {fileID: 1773477856}
   m_Layer: 0
   m_Name: TopDownHouse_DoorsAndWindows_25
   m_TagString: Untagged
@@ -2445,6 +2447,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1773477856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773477853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667288df8bcb3460bb9167040b79204e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speech1: {fileID: 163540981}
+  speech2: {fileID: 174494612}
+  triggerTime: 10
+  firstTalk: 5
+  secondTalk: 0
+  totalTalk: 10
+  finishTime: 0
+  cloud: {fileID: 1963032777}
 --- !u!1 &1939422546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,7 +3269,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1963032779}
   - component: {fileID: 1963032778}
-  - component: {fileID: 1963032780}
   m_Layer: 0
   m_Name: TextCloud
   m_TagString: Untagged
@@ -3322,26 +3343,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1963032780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963032777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 667288df8bcb3460bb9167040b79204e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speech1: {fileID: 163540981}
-  speech2: {fileID: 174494612}
-  triggerTime: 10
-  firstTalk: 5
-  secondTalk: 0
-  totalTalk: 10
-  finishTime: 0
-  cloud: {fileID: 1963032777}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

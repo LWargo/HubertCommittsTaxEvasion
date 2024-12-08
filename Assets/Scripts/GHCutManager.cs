@@ -24,6 +24,11 @@ public class GHCutManager : MonoBehaviour
             SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
         }
         if(triggerTime <= 0 && scene.name == "IntroCutScene"){
+          //  index = 0;
+            SceneManager.LoadScene("IntroPart2", LoadSceneMode.Single);
+           // SceneManager.LoadScene(index);
+        }
+        if(triggerTime <= 0 && scene.name == "IntroPart2"){
             index = 0;
             //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
             SceneManager.LoadScene(index);

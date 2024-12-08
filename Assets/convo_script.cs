@@ -17,6 +17,7 @@ public class convo_script : MonoBehaviour
     {
         speech1.gameObject.SetActive(false);
         speech2.gameObject.SetActive(false);
+        cloud.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class convo_script : MonoBehaviour
     {
         triggerTime -= Time.deltaTime;
         if(triggerTime <= totalTalk && triggerTime >= firstTalk ){
+            cloud.gameObject.SetActive(true);
             speech1.gameObject.SetActive(true);
         }
         if(triggerTime <= firstTalk){

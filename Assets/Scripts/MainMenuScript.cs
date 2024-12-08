@@ -23,7 +23,7 @@ public class MainMenuScript : MonoBehaviour
         
     }
     void goLev1(){
-        SceneManager.LoadScene("Maze1Final", LoadSceneMode.Single);
+        SceneManager.LoadScene("IntroCutScene", LoadSceneMode.Single);
     }
     void goTut(){
         SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
