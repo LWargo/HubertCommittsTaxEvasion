@@ -10,6 +10,7 @@ public class GHCutManager : MonoBehaviour
     private Scene scene;
     public float triggerTime;
     public int index;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,11 @@ public class GHCutManager : MonoBehaviour
         }
         if(triggerTime <= 0 && scene.name == "IntroPart2"){
             index = 0;
+            //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
+            SceneManager.LoadScene(index);
+        }
+        if(triggerTime <= 0 && scene.name == "CallFromBob"){
+            index = 1;
             //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
             SceneManager.LoadScene(index);
         }
