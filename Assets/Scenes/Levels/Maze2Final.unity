@@ -2305,6 +2305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
+  namee: 
+  hb: {fileID: 0}
 --- !u!61 &700871904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15584,9 +15586,15 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< Updated upstream
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.93962264, g: 0.05495901, b: 0.05495901, a: 1}
+=======
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 559324193, guid: 7e88ad1f5821f214f8cb006d881b1da2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> Stashed changes
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16068,9 +16076,15 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< Updated upstream
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.93962264, g: 0.05495901, b: 0.05495901, a: 1}
+=======
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 559324193, guid: 7e88ad1f5821f214f8cb006d881b1da2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> Stashed changes
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
