@@ -39,5 +39,10 @@ public class GHCutManager : MonoBehaviour
             //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
             SceneManager.LoadScene(index);
         }
+        if(triggerTime <= 0 && scene.name == "DinnerWithBob"){
+            index = 3;
+            //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
+            SceneManager.LoadScene(index);
+        }
     }
 }

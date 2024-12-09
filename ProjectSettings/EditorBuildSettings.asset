@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CallFromBob.unity
     guid: 189f71d98083b47e7a792c11e9e2b574
+  - enabled: 1
+    path: Assets/Scenes/DinnerWithBob.unity
+    guid: 839068722072749e791ad48032cfacdb
   m_configObjects: {}

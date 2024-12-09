@@ -33,6 +33,9 @@ public class LevelManager : MonoBehaviour
             if((index == 0 ) && (hb.icc >= 2)){ //if you're on level 1 and you hit the minimum number of required ice creams
                 SceneManager.LoadScene("CallFromBob", LoadSceneMode.Single);
             }
+            if((index == 2 ) && (hb.icc >= 2)){ //if you're on level 2 and you hit the minimum number of required ice creams
+                SceneManager.LoadScene("DinnerWithBob", LoadSceneMode.Single);
+            }
             else{
                 index++;
                 SceneManager.LoadScene(index);
