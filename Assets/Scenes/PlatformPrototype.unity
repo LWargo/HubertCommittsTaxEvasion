@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: BossMusic
-    clip: {fileID: 8300000, guid: d99506cbb163f8f4b83ffcd46b8c7b99, type: 3}
+    clip: {fileID: 8300000, guid: bcf0f60d09c21f847b7f0721a667e688, type: 3}
     volume: 0.3
     pitch: 1
     loop: 1
