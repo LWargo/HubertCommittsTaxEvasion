@@ -62,6 +62,6 @@ Our goal is to finalize production of our game for release.
 - [ ] Final Tutorial Design (Lora)
 - [X] Maze 4 Design (Lora)
 - [X] Maze 5 Design (Lora)
-- [ ] Maze 4 Functionality (Preston)
-- [ ] Maze 5 Functionality (Preston)
-- [ ] Adding a Pause in IRS Agent Paths 
+- [X] Maze 4 Functionality (Preston)
+- [X] Maze 5 Functionality (Preston)
+- [ ] Adding a Pause in IRS Agent Paths (Casey)
