@@ -53,7 +53,7 @@ Our goal is to finalize production of our game for release.
 - [X] Design Ice Creams (Casey)
 - [X] Design Power-Ups (Casey)
 - [ ] Create Cut Scenes (Lora)
-~~- [ ] Flesh Out IRS Form (Lora)~~ (out of scope)
+- ~~[ ] Flesh Out IRS Form (Lora)~~ (out of scope)
 - [ ] Script Out the Romance Storyline (Lora)
 - [X] Create Transition between Levels (Lora)
 - [ ] Boss Fight End Game Conditions (Casey)
