@@ -57,7 +57,7 @@ Our goal is to finalize production of our game for release.
 - [ ] Script Out the Romance Storyline (Lora)
 - [X] Create Transition between Levels (Lora)
 - [ ] Boss Fight End Game Conditions (Casey)
-- [ ] Make Game Over Screens/Panels (Lora)
+- [ ] Make Game Over Screens/Panels (Casey)
 - [ ] Final Main Menu Design (Lora)
 - [ ] Final Tutorial Design (Lora)
 - [X] Maze 4 Design (Lora)
