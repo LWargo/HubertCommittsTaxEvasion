@@ -6,12 +6,15 @@ using UnityEngine.UI;
 using UnityEditor;
 
 
+
 public class LevelManager : MonoBehaviour
 {
     public int index;
     public string namee;
     public HubertBehavior hb;
   //  public GameObject door;
+    public GameObject gameOverPanel;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +43,7 @@ public class LevelManager : MonoBehaviour
                 index++;
                 SceneManager.LoadScene(index);
             }
-        }
+        } 
         if(other.CompareTag("Player") && (index == 4)){ // if I'm on level 5
             Debug.Log("switching out of level 5");
             SceneManager.LoadScene("GetHomeCutScene", LoadSceneMode.Single);
@@ -48,4 +51,15 @@ public class LevelManager : MonoBehaviour
         
     }
 
+    public void gameOver() {
+        gameOverPanel.SetActive(true);
+    }
+
+    public void ReloadCurrentScene() {
+        SceneManager.LoadScene(index);
+    }
+
+    public void LoadMainMenu() {
+        SceneManager.LoadScene(6);
+    }
 }

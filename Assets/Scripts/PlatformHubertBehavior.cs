@@ -18,11 +18,11 @@ public class PlatformHubertBehavior : MonoBehaviour
     public int health;
     public int maxHealth;
     public HealthBar healthBar;
-    // public TMP_Text healthCounter;
     public float knockbackForce;
     private bool isKnockingBack;
 
     public BossBehavior boss;
+    private GameObject levelManager;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +31,9 @@ public class PlatformHubertBehavior : MonoBehaviour
         anim = GetComponent<Animator>();
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        // healthCounter.SetText( "Health: " + health);
 
         boss = GameObject.Find("PlatformBoss").GetComponent<BossBehavior>();
+        levelManager = GameObject.Find("LevelManager");
     }
 
     // Update is called once per frame
@@ -61,7 +61,9 @@ public class PlatformHubertBehavior : MonoBehaviour
             if(!isKnockingBack) {
                 health--;
                 healthBar.SetHealth(health);
-                // healthCounter.text = "Health: " + health;
+                if(health<=0) {
+                    levelManager.GetComponent<LevelManager>().gameOver();
+                }
             }
             StartCoroutine(Knockback(knockbackForce));
         } else if(other.gameObject.CompareTag("Boss")) {
@@ -74,7 +76,9 @@ public class PlatformHubertBehavior : MonoBehaviour
             if(!isKnockingBack) {
                 health--;
                 healthBar.SetHealth(health);
-                // healthCounter.text = "Health: " + health;
+                if(health<=0) {
+                    levelManager.GetComponent<LevelManager>().gameOver();
+                }
             }
             StartCoroutine(Knockback(knockbackForce));
         }
