@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art/Lora Assets/AdventureBegins_DemoVersion.meta
+guid: bf06206b62ec54ce187ba6b1150c8544
+folderAsset: yes
+DefaultImporter:
+========
 guid: b40fef400263496438b5b00e107ffaef
 NativeFormatImporter:
+>>>>>>>> 499a954db3b6ea7cb9b47b8807cb37a5bfcfc2fc:Assets/Animations/Ice Cream.controller.meta
   externalObjects: {}
   mainObjectFileID: 9100000
   userData: 

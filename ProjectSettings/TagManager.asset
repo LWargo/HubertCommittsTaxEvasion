@@ -10,6 +10,8 @@ TagManager:
   - Boss
   - Wall
   - Projectile
+  - InvisPWP
+  - SpeedPWP
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ public class HubertBehavior : MonoBehaviour
     // public EnemyPatrol enemyPatrol;
     public Vector3 startpos;
     public TMP_Text icc_txt;
-    int icc = 0;
+    public int icc = 0;
     // public GameObject iceCream;
     public TMP_Text pwp_txt;
     private SpriteRenderer spriteRenderer;

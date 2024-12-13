@@ -31,7 +31,7 @@ Our goal is to expand upon our more fleshed-out prototype and add more functiona
 - [X] Boss Fight Attack 1 (Casey)
 - [X] Boss Fight Attack 2 (Casey)
 - [X] Boss Fight Hubert Take Damage (Casey)
-- [X] Boss Fight Boss Take Damage
+- [X] Boss Fight Boss Take Damage (Casey)
 - [X] Boss Fight Hubert Attack (Casey)
 - [X] Prototype Invisibility Powerup (Preston)
 - [X] Final Maze 1 Design (Lora)
@@ -41,7 +41,7 @@ Our goal is to expand upon our more fleshed-out prototype and add more functiona
 - [X] Final Maze 2 Functionality (Preston)
 - [X] Final Maze 3 Functionality (Preston)
 - [X] Fix Power-ups and Ice Cream Bug (Lora)
-- [X] Fix Maze3 Collision Bug (Preston)
+- [X] Fix Maze 3 Collision Bug (Preston)
 
 
 ## Sprint 3 Goals
@@ -53,15 +53,16 @@ Our goal is to finalize production of our game for release.
 - [X] Design Ice Creams (Casey)
 - [X] Design Power-Ups (Casey)
 - [ ] Create Cut Scenes (Lora)
-- [ ] Flesh Out IRS Form (Lora)
+- ~~[ ] Flesh Out IRS Form (Lora)~~ (out of scope)
 - [ ] Script Out the Romance Storyline (Lora)
 - [X] Create Transition between Levels (Lora)
 - [ ] Boss Fight End Game Conditions (Casey)
-- [ ] Make Game Over Screens/Panels (Lora)
+- [ ] Make Game Over Screens/Panels (~~Lora~~ Casey)
 - [ ] Final Main Menu Design (Lora)
 - [ ] Final Tutorial Design (Lora)
-- [X] Maze 4 Design (Lora)
-- [X] Maze 5 Design (Lora)
-- [ ] Maze 4 Functionality (Preston)
-- [ ] Maze 5 Functionality (Preston)
-- [ ] Adding a Pause in IRS Agent Paths 
+- [X] Maze 4 Design (Lora + Preston)
+- [X] Maze 5 Design (Lora + Preston)
+- [X] Maze 4 Functionality (Preston)
+- [X] Maze 5 Functionality (Preston)
+- [X] Further Maze Bugfixing (Preston)
+- [ ] Adding a Pause in IRS Agent Paths (Casey)
