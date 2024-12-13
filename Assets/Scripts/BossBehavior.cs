@@ -28,6 +28,8 @@ public class BossBehavior : MonoBehaviour
     public float stompDelay;
     private bool playerStomped = false;
 
+    public BossFightHandler bossFightHandler;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -158,6 +160,7 @@ public class BossBehavior : MonoBehaviour
             health--;
             healthBar.SetHealth(health);
             if(health <= 0) {
+                bossFightHandler.bossDefeated();
                 Destroy(this.gameObject);
             }
             vulnerable = false;

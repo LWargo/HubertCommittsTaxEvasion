@@ -22,11 +22,13 @@ public class HubertBehavior : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public string hubertColor = "#FFFFFF";
     public string invisColor = "#848484";
+    private Animator anim;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         startpos = transform.position;
         icc_txt.SetText("Ice Creams: " + icc);
         pwp_txt.SetText("");
@@ -53,6 +55,12 @@ public class HubertBehavior : MonoBehaviour
             ColorUtility.TryParseHtmlString(invisColor, out Color invisColorHex);
             spriteRenderer.color = invisColorHex;
             StartCoroutine(DisableInvisPowerup());
+        }
+
+        if(movement.x!=0 || movement.y!=0) {
+            anim.SetBool("moving",true);
+        } else {
+            anim.SetBool("moving",false);
         }
     }
 
