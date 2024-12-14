@@ -22,12 +22,21 @@ public class HubertBehavior : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public string hubertColor = "#FFFFFF";
     public string invisColor = "#848484";
+    private Animator anim;
+    private GameObject levelManager;
+    public AudioManager audioManager;
+    private bool dead;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        startpos = transform.position;
+        anim = GetComponent<Animator>();
+        levelManager = GameObject.Find("LevelManager");
+        audioManager = FindObjectOfType<AudioManager>();
+
+        // startpos = transform.position;
+        dead = false;
         icc_txt.SetText("Ice Creams: " + icc);
         pwp_txt.SetText("");
         ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
@@ -37,8 +46,10 @@ public class HubertBehavior : MonoBehaviour
     void Update()
     {
         // Get input from the player
-        movement.x = Input.GetAxisRaw("Horizontal"); // Left and Right keys (or A/D keys)
-        movement.y = Input.GetAxisRaw("Vertical");   // Up and Down keys (or W/S keys)
+        if(!dead) {
+            movement.x = Input.GetAxisRaw("Horizontal"); // Left and Right keys (or A/D keys)
+            movement.y = Input.GetAxisRaw("Vertical");   // Up and Down keys (or W/S keys)
+        }
 
         if (pwp_txt.text == "Press E = Sprint" && Input.GetKey(KeyCode.E))
         {
@@ -54,6 +65,12 @@ public class HubertBehavior : MonoBehaviour
             spriteRenderer.color = invisColorHex;
             StartCoroutine(DisableInvisPowerup());
         }
+
+        if(movement.x!=0 || movement.y!=0) {
+            anim.SetBool("moving",true);
+        } else {
+            anim.SetBool("moving",false);
+        }
     }
 
     void FixedUpdate()
@@ -68,22 +85,27 @@ public class HubertBehavior : MonoBehaviour
         ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
         if(other.gameObject.CompareTag("Enemy") && spriteRenderer.color == hubertColorHex){
             // this.transform.position = startpos; //move player back to start
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            dead = true;
+            levelManager.GetComponent<LevelManager>().gameOver();
         }
 
         if(other.gameObject.CompareTag("IceCream")){
             Destroy(other.gameObject);
+            audioManager.Play("IceCreamGetSFX");
             icc++;
             icc_txt.text = "Ice Creams: " + icc;
         }
 
         if (other.gameObject.CompareTag("SpeedPWP")) {
             Destroy(other.gameObject);
+            audioManager.Play("PowerupGetSFX");
             pwp_txt.text = "Press E = Sprint";
         }
 
         if (other.gameObject.CompareTag("InvisPWP")) {
             Destroy(other.gameObject);
+            audioManager.Play("PowerupGetSFX");
             pwp_txt.text = "Press R = Invisible";
         }
     }
@@ -97,5 +119,9 @@ public class HubertBehavior : MonoBehaviour
         yield return new WaitForSeconds(3);
         ColorUtility.TryParseHtmlString(hubertColor, out Color hubertColorHex);
         spriteRenderer.color = hubertColorHex;
+    }
+
+    void OnReset() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

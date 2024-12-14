@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DinnerWithBob.unity
     guid: 839068722072749e791ad48032cfacdb
+  - enabled: 1
+    path: Assets/Scenes/VictoryCredits.unity
+    guid: 6b33d2182749e4246aad505e5a5cb8aa
   m_configObjects: {}
