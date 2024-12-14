@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1198845209688027239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1897571669968489286}
+  - component: {fileID: 4990362624876209561}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: AudioManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1897571669968489286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198845209688027239}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4990362624876209561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198845209688027239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826c14b97333cdf4f87958254ef2aa4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MainMenuMusic
+    clip: {fileID: 8300000, guid: 081825eef676c4d43a1a9cca069aa6cb, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: BossMusic
+    clip: {fileID: 8300000, guid: bcf0f60d09c21f847b7f0721a667e688, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: LevelMusic1
+    clip: {fileID: 8300000, guid: 90fa75e287541534b841db8c9fceed8a, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: LevelMusic2
+    clip: {fileID: 8300000, guid: 782b99a44558c154cbba56c3860d7128, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: LevelMusic3
+    clip: {fileID: 8300000, guid: 2ce1d7060d313b643b444aa94b7bbed7, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: VictoryMusic
+    clip: {fileID: 8300000, guid: 55101eec84380f243ab39118a12617bb, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: IceCreamGetSFX
+    clip: {fileID: 8300000, guid: 9723c64d31ce6804e8865e6b93f34e13, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerupGetSFX
+    clip: {fileID: 8300000, guid: b7f3c4b36d6e3a644b4a82d2fa728c66, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ProjectileSFX
+    clip: {fileID: 8300000, guid: e9cb40a33808dd84d9a5edb1cf2c71a6, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDamagedSFX
+    clip: {fileID: 8300000, guid: 3286e2980d51aae42a0846ac89c81ffc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BossDamagedSFX
+    clip: {fileID: 8300000, guid: 92cedda148bdbca4a871a9c353405f11, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

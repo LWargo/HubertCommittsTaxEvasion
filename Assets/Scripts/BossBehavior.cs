@@ -29,6 +29,7 @@ public class BossBehavior : MonoBehaviour
     private bool playerStomped = false;
 
     public BossFightHandler bossFightHandler;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,8 @@ public class BossBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+        audioManager = FindObjectOfType<AudioManager>();
+
         StartCoroutine("PhaseOne");
         vulnerable = false;
         health = maxHealth;
@@ -88,6 +91,7 @@ public class BossBehavior : MonoBehaviour
             int i = 0;
             while(i<projectileAmount) {
                 GameObject bullet = Instantiate(projectile,projectileSpawnPoint.position,Quaternion.identity);
+                audioManager.Play("ProjectileSFX");
                 if(transform.position.x==spots[0].position.x || temp==spots[0]) {
                     bullet.GetComponent<Rigidbody2D>().velocity = Vector2.right*projectileSpeed;
                     Vector3 localScale = bullet.transform.localScale;
@@ -157,6 +161,7 @@ public class BossBehavior : MonoBehaviour
 
     public void TakeDamage() {
         if(vulnerable) {
+            audioManager.Play("BossDamagedSFX");
             health--;
             healthBar.SetHealth(health);
             if(health <= 0) {

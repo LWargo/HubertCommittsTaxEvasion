@@ -12,6 +12,7 @@ TagManager:
   - Projectile
   - InvisPWP
   - SpeedPWP
+  - AudioManager
   layers:
   - Default
   - TransparentFX

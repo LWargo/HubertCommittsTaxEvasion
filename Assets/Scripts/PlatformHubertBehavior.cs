@@ -23,6 +23,8 @@ public class PlatformHubertBehavior : MonoBehaviour
 
     public BossBehavior boss;
     private GameObject levelManager;
+    public AudioManager audioManager;
+    private bool dead;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +33,11 @@ public class PlatformHubertBehavior : MonoBehaviour
         anim = GetComponent<Animator>();
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        dead = false;
 
         boss = GameObject.Find("PlatformBoss").GetComponent<BossBehavior>();
         levelManager = GameObject.Find("LevelManager");
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -50,7 +54,7 @@ public class PlatformHubertBehavior : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if(!isKnockingBack) {
+        if(!isKnockingBack && !dead) {
             rb.velocity = new UnityEngine.Vector2(horizontal * speed, rb.velocity.y);
         }
     }
@@ -59,9 +63,11 @@ public class PlatformHubertBehavior : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Boss") && other.collider.bounciness < 1){
             if(!isKnockingBack) {
+                audioManager.Play("PlayerDamagedSFX");
                 health--;
                 healthBar.SetHealth(health);
                 if(health<=0) {
+                    dead = true;
                     levelManager.GetComponent<LevelManager>().gameOver();
                 }
             }
@@ -74,6 +80,7 @@ public class PlatformHubertBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Projectile")) {
             if(!isKnockingBack) {
+                audioManager.Play("PlayerDamagedSFX");
                 health--;
                 healthBar.SetHealth(health);
                 if(health<=0) {

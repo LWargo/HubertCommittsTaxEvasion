@@ -10,24 +10,47 @@ using UnityEditor;
 public class LevelManager : MonoBehaviour
 {
     public int index;
-    public string namee;
+    public string sceneName;
     public HubertBehavior hb;
   //  public GameObject door;
     public GameObject gameOverPanel;
+    public AudioManager audioManager;
     
     // Start is called before the first frame update
     void Start()
     {
         index = SceneManager.GetActiveScene().buildIndex;
-        namee = SceneManager.GetActiveScene().name;
+        sceneName = SceneManager.GetActiveScene().name;
         hb = FindObjectOfType<HubertBehavior>();
-        
+
+        audioManager = FindObjectOfType<AudioManager>();
+        if(sceneName.Equals("MainMenu")) {
+            audioManager.Stop();
+            audioManager.Play("MainMenuMusic");
+        } else if(sceneName.Equals("Maze1Final")) {
+            audioManager.Stop();
+            audioManager.Play("LevelMusic1");
+        } else if(sceneName.Equals("Maze2Final")) {
+            audioManager.Stop();
+            audioManager.Play("LevelMusic2");
+        } else if(sceneName.Equals("Maze5Final")) {
+            audioManager.Stop();
+            audioManager.Play("LevelMusic3");
+        } else if(sceneName.Equals("PlatformPrototype")) {
+            audioManager.Stop();
+            audioManager.Play("BossMusic");
+        } else if(sceneName.Equals("VictoryCredits")) {
+            audioManager.Stop();
+            audioManager.Play("VictoryMusic");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.R)) {
+            ReloadCurrentScene();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -56,10 +79,16 @@ public class LevelManager : MonoBehaviour
     }
 
     public void ReloadCurrentScene() {
+        // Debug.Log("RELOAD");
         SceneManager.LoadScene(index);
     }
 
     public void LoadMainMenu() {
+        // Debug.Log("MAIN MENU");
         SceneManager.LoadScene(6);
+    }
+
+    public void LoadVictory() {
+        SceneManager.LoadScene(13);
     }
 }

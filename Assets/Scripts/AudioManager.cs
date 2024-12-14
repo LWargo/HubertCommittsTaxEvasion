@@ -1,12 +1,15 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
     public static AudioManager instance;
+
+    private string sceneName;
 
     // Start is called before the first frame update
     void Awake()
@@ -31,7 +34,19 @@ public class AudioManager : MonoBehaviour
     }
 
     void Start() {
-        Play("BossMusic");
+        // Play("MainMenuMusic");
+
+        /*sceneName = SceneManager.GetActiveScene().name;
+        if(sceneName.Equals("MainMenu"))
+            Play("MainMenuMusic");
+        else if(sceneName.Equals("Maze1Final"))
+            Play("LevelMusic1");
+        else if(sceneName.Equals("Maze3Final"))
+            Play("LevelMusic2");
+        else if(sceneName.Equals("Maze5Final"))
+            Play("LevelMusic3");
+        else if(sceneName.Equals("PlatformPrototype"))
+            Play("BossMusic");*/
     }
 
     public void Play(string name) {
@@ -41,5 +56,11 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    public void Stop() {
+        foreach(Sound s in sounds) {
+            s.source.Stop();
+        }
     }
 }

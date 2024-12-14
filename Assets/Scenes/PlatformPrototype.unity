@@ -309,7 +309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MAIN MENU
+  m_text: CONTINUE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 285a3624a63300942b985ac9782d3b80, type: 2}
   m_sharedMaterial: {fileID: 24876286592246177, guid: 285a3624a63300942b985ac9782d3b80, type: 2}
@@ -821,7 +821,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
+  sceneName: 
+  hb: {fileID: 0}
   gameOverPanel: {fileID: 744870678}
+  audioManager: {fileID: 0}
 --- !u!4 &609182030
 Transform:
   m_ObjectHideFlags: 0
@@ -998,6 +1001,7 @@ MonoBehaviour:
   healthBar: {fileID: 512336333}
   stompDelay: 1
   bossFightHandler: {fileID: 894781014}
+  audioManager: {fileID: 0}
 --- !u!50 &637473510
 Rigidbody2D:
   serializedVersion: 4
@@ -2330,7 +2334,7 @@ GameObject:
   - component: {fileID: 1716870105}
   - component: {fileID: 1716870104}
   m_Layer: 5
-  m_Name: MainMenuButton (1)
+  m_Name: VictoryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2402,7 +2406,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 609182029}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadMainMenu
+        m_MethodName: LoadVictory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2450,57 +2454,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716870102}
   m_CullTransparentMesh: 1
---- !u!1 &1959388849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1959388851}
-  - component: {fileID: 1959388850}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1959388850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959388849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 826c14b97333cdf4f87958254ef2aa4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: BossMusic
-    clip: {fileID: 8300000, guid: bcf0f60d09c21f847b7f0721a667e688, type: 3}
-    volume: 0.7
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
---- !u!4 &1959388851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959388849}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118452488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,7 +2898,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1959388851}
   - {fileID: 999906478}
   - {fileID: 609182030}
   - {fileID: 5467882320631784703}
