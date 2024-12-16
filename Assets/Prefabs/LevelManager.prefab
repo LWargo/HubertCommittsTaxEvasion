@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5606128807453531330}
   - component: {fileID: 313832331789257196}
   m_Layer: 0
-  m_Name: staircase 2
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,3 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
+  sceneName: 
+  hb: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  audioManager: {fileID: 0}

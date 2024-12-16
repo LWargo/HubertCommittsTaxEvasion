@@ -58,7 +58,7 @@ public class HubertBehavior : MonoBehaviour
             moveSpeed = 10f;
             StartCoroutine(DisableSprintPowerup());
         }
-        if (pwp_txt.text == "Press R = Invisible" && Input.GetKey(KeyCode.R))
+        if (pwp_txt.text == "Press E = Invisible" && Input.GetKey(KeyCode.E))
         {
             pwp_txt.text = "";
             ColorUtility.TryParseHtmlString(invisColor, out Color invisColorHex);
@@ -93,7 +93,7 @@ public class HubertBehavior : MonoBehaviour
         if(other.gameObject.CompareTag("IceCream")){
             Debug.Log("found ice cream");
             Destroy(other.gameObject);
-         //   audioManager.Play("IceCreamGetSFX");
+            audioManager.Play("IceCreamGetSFX");
             icc++;
             icc_txt.text = "Ice Creams: " + icc;
         }
@@ -107,7 +107,7 @@ public class HubertBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("InvisPWP")) {
             Destroy(other.gameObject);
             audioManager.Play("PowerupGetSFX");
-            pwp_txt.text = "Press R = Invisible";
+            pwp_txt.text = "Press E = Invisible";
         }
     }
 

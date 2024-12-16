@@ -13,7 +13,7 @@ public class MainMenuScript : MonoBehaviour
     void Start()
     {
         oneBtn.onClick.AddListener( () => goLev1() );
-        tut.onClick.AddListener( () => goTut());
+        // tut.onClick.AddListener( () => goTut());
 
     }
 

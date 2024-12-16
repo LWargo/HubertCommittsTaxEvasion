@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerTime: 9
+  index: 0
 --- !u!4 &495483083
 Transform:
   m_ObjectHideFlags: 0
@@ -1425,6 +1426,10 @@ PrefabInstance:
     - target: {fileID: 2538331580498130598, guid: 2a8740d03bd6e1f4181171a6b4b9330b, type: 3}
       propertyPath: m_Name
       value: PlatformHubert
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906907010872598279, guid: 2a8740d03bd6e1f4181171a6b4b9330b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397950258197349297, guid: 2a8740d03bd6e1f4181171a6b4b9330b, type: 3}
       propertyPath: m_LocalPosition.x
