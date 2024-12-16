@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
   //  public GameObject door;
     public GameObject gameOverPanel;
     public AudioManager audioManager;
+    public static bool bobTrack;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class LevelManager : MonoBehaviour
             audioManager.Stop();
             audioManager.Play("VictoryMusic");
         }
+        Debug.Log(bobTrack);
     }
 
     // Update is called once per frame
@@ -55,19 +57,32 @@ public class LevelManager : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
        // Debug.Log("hit trigger");
-        if(other.CompareTag("Player") && (index != 4)){ // aka if you're on levels 1-4
-            if((index == 0 ) && (hb.icc >= 2)){ //if you're on level 1 and you hit the minimum number of required ice creams
+        if(other.CompareTag("Player") && (index != 5)){ // aka if you're on levels 1-4
+            
+            if((index == 1 ) && (hb.icc >= 2)){ //if you're on level 1 and you hit the minimum number of required ice creams
+                Debug.Log("bob calls you!");
+                bobTrack = true;
                 SceneManager.LoadScene("CallFromBob", LoadSceneMode.Single);
+                return;
             }
-            if((index == 2 ) && (hb.icc >= 2)){ //if you're on level 2 and you hit the minimum number of required ice creams
+            if((index == 3 ) && (hb.icc >= 2) && (bobTrack == true)){ //if you're on level 2 and you hit the minimum number of required ice creams
                 SceneManager.LoadScene("DinnerWithBob", LoadSceneMode.Single);
+                return;
             }
+
             else{
+                if(index == 3 || index == 1 && hb.icc < 2){
+                    bobTrack = false;
+                }
                 index++;
                 SceneManager.LoadScene(index);
             }
         } 
-        if(other.CompareTag("Player") && (index == 4)){ // if I'm on level 5
+        if(other.CompareTag("Player") && (sceneName == "Maze5Final")){ // if I'm on level 5
+            if( (hb.icc >= 2) && (bobTrack == true) ){ //if you're on level 5 and you hit the minimum number of required ice creams
+                SceneManager.LoadScene("BobProposes", LoadSceneMode.Single);
+                return;
+            }
             Debug.Log("switching out of level 5");
             SceneManager.LoadScene("GetHomeCutScene", LoadSceneMode.Single);
         }
@@ -85,7 +100,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu() {
         // Debug.Log("MAIN MENU");
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(0);
     }
 
     public void LoadVictory() {
