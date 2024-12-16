@@ -91,8 +91,9 @@ public class HubertBehavior : MonoBehaviour
         }
 
         if(other.gameObject.CompareTag("IceCream")){
+            Debug.Log("found ice cream");
             Destroy(other.gameObject);
-            audioManager.Play("IceCreamGetSFX");
+         //   audioManager.Play("IceCreamGetSFX");
             icc++;
             icc_txt.text = "Ice Creams: " + icc;
         }

@@ -30,19 +30,22 @@ public class GHCutManager : MonoBehaviour
            // SceneManager.LoadScene(index);
         }
         if(triggerTime <= 0 && scene.name == "IntroPart2"){
-            index = 0;
-            //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
-            SceneManager.LoadScene(index);
-        }
-        if(triggerTime <= 0 && scene.name == "CallFromBob"){
             index = 1;
             //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
             SceneManager.LoadScene(index);
         }
-        if(triggerTime <= 0 && scene.name == "DinnerWithBob"){
-            index = 3;
+        if(triggerTime <= 0 && scene.name == "CallFromBob"){
+            index = 2;
             //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
             SceneManager.LoadScene(index);
+        }
+        if(triggerTime <= 0 && scene.name == "DinnerWithBob"){
+            index = 4;
+            //SceneManager.LoadScene("PlatformPrototype", LoadSceneMode.Single);
+            SceneManager.LoadScene(index);
+        }
+        if(triggerTime <= 0 && scene.name == "HappyEverAfter"){
+            SceneManager.LoadScene("VictoryCredits", LoadSceneMode.Single);
         }
     }
 }
