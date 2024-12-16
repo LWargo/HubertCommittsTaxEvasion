@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -404.99994}
+  m_AnchoredPosition: {x: 0, y: -77.14285}
   m_SizeDelta: {x: 1500, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166271409
@@ -327,7 +327,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Created by:
 
-    Preston Harris, Casimir Huffman, and Lora Wargo'
+    Preston Harris, Casimir Huffman, and Lora Wargo
+
+
+    Music/Sound
+    Effects by:
+
+    Ana Azman and Casimir HUffman'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 285a3624a63300942b985ac9782d3b80, type: 2}
   m_sharedMaterial: {fileID: 24876286592246177, guid: 285a3624a63300942b985ac9782d3b80, type: 2}
@@ -483,7 +489,7 @@ Transform:
   m_GameObject: {fileID: 271744183}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000011920929, y: 3, z: 0}
+  m_LocalPosition: {x: 0.00000011920929, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -872,7 +878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 308.5714}
+  m_AnchoredPosition: {x: 0, y: 385.71426}
   m_SizeDelta: {x: 1800, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661794638
@@ -990,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6284554750061965720, guid: adaa6408704f9c84d84d471225ad6e30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 6284554750061965720, guid: adaa6408704f9c84d84d471225ad6e30, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1065,7 +1071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -173.57143}
+  m_AnchoredPosition: {x: 0, y: -385.7142}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1272399473
@@ -1229,7 +1235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6284554750061965720, guid: adaa6408704f9c84d84d471225ad6e30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 6284554750061965720, guid: adaa6408704f9c84d84d471225ad6e30, type: 3}
       propertyPath: m_LocalPosition.z
